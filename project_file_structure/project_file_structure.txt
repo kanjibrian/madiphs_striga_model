@@ -1,0 +1,20 @@
+striga_model_env_var/
+├── openmeteoweather/
+│   ├── __init__.py
+│   └── weather_request.py
+├── project_file_structure/
+│   ├── project_file_structure.py
+│   └── project_file_structure.txt
+├── rasterdata/
+│   ├── data/
+│   │   ├── habitat_suitability.tif
+│   │   └── soil_fertility_index.tif
+│   ├── __init__.py
+│   └── extract_data.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_openmeteoweather.py
+│   └── test_rasterdata.py
+├── .cache.sqlite
+├── .env
+└── .gitignore

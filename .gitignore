@@ -1,0 +1,25 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore environment variables file
+.env
+
+# Ignore specific files
+wd_file_structure.py
+
+# Ignore local SQLite caches
+.cache.sqlite
+
+# Ignore test artifacts (if any)
+*.log
+*.tmp
+*.pytest_cache/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
