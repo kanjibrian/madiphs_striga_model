@@ -1,7 +1,7 @@
 import os
 
 EXCLUDE = {'__pycache__'}
-EXCLUDE_EXTENSIONS = {'.pyc', '.pyo', '.pyd'}
+EXCLUDE_EXTENSIONS = {'.pyc', '.pyo', '.pyd', '.log', '.tmp', '.bak', '.git'}
 
 def tree(dir_path, prefix=""):
     # Get all entries except excluded
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     for line in tree_lines:
         print(line)
 
-    with open("project_file_structure/project_file_structure.txt", "w", encoding="utf-8") as f:
+    with open("project_file_structure.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(tree_lines))
 
-    # print("\nFile structure saved to 'project_file_structure.txt'")
+    print("\nProject structure saved to 'project_file_structure.txt' file.")

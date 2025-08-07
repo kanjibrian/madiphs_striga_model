@@ -1,14 +1,13 @@
-import numpy as np
-import sys
-import json
-
-np.random.seed(42) # Set a random seed for reproducibility
-
-from openmeteoweather import weather_request
-import data
-from data import extract_data
 from importlib.resources import files
+import point_data_extraction
+import weather_request
+import numpy as np
+import json
+import data
+import sys
 
+# Set a random seed for reproducibility
+np.random.seed(42) 
 
 def host_plant_interaction(crop_type: int, growth_stage: float) -> float:
     """Calculate crop-specific risk modifier based on growth stage."""
@@ -85,9 +84,9 @@ if __name__ == "__main__":
     longitude = float(sys.argv[6]) # longitude
 
 
-    HABITAT_SUITABILITY = extract_data.extraction(habitat_suitability_filepath, longitude, latitude)
+    HABITAT_SUITABILITY = point_data_extraction.extraction(habitat_suitability_filepath, longitude, latitude)
     RAINFALL_INTENSITY = weather_request.get_weather_data(date_str, latitude, longitude)
-    SOIL_FERTILITY = extract_data.extraction(soil_fertility_index_filepath, longitude, latitude)
+    SOIL_FERTILITY = point_data_extraction.extraction(soil_fertility_index_filepath, longitude, latitude)
 
 
     # Variables passed from external system mobile application API call with all parameters
@@ -95,10 +94,10 @@ if __name__ == "__main__":
         planting_day=int(sys.argv[1]),
         crop_type=int(sys.argv[2]),
         weed_removal_day=int(sys.argv[3]),
-        soil_fertility_index=SOIL_FERTILITY,
+        soil_fertility_index=SOIL_FERTILITY, # pyright: ignore[reportArgumentType]
         rainfall_intensity=RAINFALL_INTENSITY,
-        habitat_suitability=HABITAT_SUITABILITY,
-        historical_striga=sys.argv[5]  # Direct parameter input
+        habitat_suitability=HABITAT_SUITABILITY, # pyright: ignore[reportArgumentType]
+        historical_striga=sys.argv[5]  # pyright: ignore[reportArgumentType]
     )
 
 
