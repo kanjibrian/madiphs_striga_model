@@ -1,12 +1,12 @@
-from madiphs import data
-from madiphs import point_data_extraction
+from madiphs_models import data
+from madiphs_models import point_data_extraction
 from importlib.resources import files
 
 def test_point_data_extraction(latitude=-13.8440779, longitude=34.541665, user_defined="no"):
     
     # File paths for raster data
     soil_fertility_index_filepath = str(files(data).joinpath("raster/soil_fertility_index.tif"))
-    habitat_suitability_filepath = str(files(data).joinpath("raster/habitat_suitability.tif"))
+    habitat_suitability_filepath = str(files(data).joinpath("raster/striga_habitat_suitability.tif"))
 
     if user_defined == "yes":
         latitude = float(input("Enter latitude: "))

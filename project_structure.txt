@@ -1,0 +1,42 @@
+madiphs/
+├── .pytest_cache/
+│   ├── v/
+│   │   └── cache/
+│   │       └── nodeids
+│   ├── CACHEDIR.TAG
+│   └── README.md
+├── madiphs_models/
+│   ├── data/
+│   │   ├── raster/
+│   │   │   ├── soil_fertility_index.tif
+│   │   │   ├── striga_habitat_suitability.tif
+│   │   │   └── striga_habitat_suitability.tif.aux.xml
+│   │   ├── shapefile/
+│   │   │   ├── malawi_admin0.geojson
+│   │   │   ├── malawi_admin1.geojson
+│   │   │   ├── malawi_admin2.geojson
+│   │   │   ├── malawi_admin3.geojson
+│   │   │   └── malawi_epa.geojson
+│   │   ├── striga/
+│   │   │   ├── Striga Data Collection (1).csv
+│   │   │   ├── Striga Data Collection (1)_NAs.csv
+│   │   │   └── Striga Data Collection - Second Phase.csv
+│   │   └── __init__.py
+│   ├── sample_outputs/
+│   ├── __init__.py
+│   ├── point_data_extraction.py
+│   ├── striga_risk_assesment.py
+│   └── weather_request.py
+├── old/
+│   └── requirements.txt
+├── tests/
+│   ├── .cache.sqlite
+│   ├── striga_risk_assesment_test.ipynb
+│   ├── test_point_data_extraction.py
+│   └── test_weather_request.py
+├── .cache.sqlite
+├── README.md
+├── poetry.toml
+├── project_structure.py
+├── project_structure.txt
+└── pyproject.toml
